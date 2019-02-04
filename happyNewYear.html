@@ -11,6 +11,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 body {
     font-size: 32px;
@@ -300,7 +301,13 @@ h1 {
     top: 30%;
     position: fixed;
 }
-
+.happy-img{
+    background-image: url(./happy-img.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
 /* keyframes
 ------------------------------------*/
 @keyframes drop1anim {
@@ -381,10 +388,10 @@ h1 {
 }</style>
 </head>
 <body>
+<div id="firstPage" onclick="changePage()">
 <div class="text">
-    <div class="new-year-title">新年快乐<br/>万事如意<br/>猪年大吉</div>
+    <div class="new-year-title" >新年快乐<br/>万事如意<br/>猪年大吉</div>
 </div>
-
 <div class="firework-grp firework-grp2">
     <div class="firework size05 pos1 ">
         <div class="drops-grp">
@@ -613,12 +620,18 @@ h1 {
         </div>
     </div>
 </div>
-
+    
+</div>
+<div class="happy-img hidden" id="secPage"></div>
 
 
 
 <script>
-
+function changePage() {
+    debugger;
+    document.getElementById('firstPage').style.display="none";
+    document.getElementById('secPage').style.display="auto";
+}
 </script>
 
 </body>
